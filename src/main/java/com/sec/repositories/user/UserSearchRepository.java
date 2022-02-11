@@ -15,4 +15,5 @@ Optional<User> findByNom(String nom);
 Optional<User> findByPrenom(String prenom);
 Optional<User> findByEmail(String email);
 Optional<User> findByEmailAndPassword(String email,String password);
+
 }
