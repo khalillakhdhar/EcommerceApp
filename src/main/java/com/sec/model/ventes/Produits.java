@@ -23,7 +23,6 @@ public class Produits {
 	private int id ;
 	
 	
-	private String cat;
 	
 	@NotBlank
 	private String photo ;
@@ -54,13 +53,6 @@ public class Produits {
 
 
 
-	public String getCat() {
-		return cat;
-	}
-
-	public void setCat(String cat) {
-		this.cat = cat;
-	}
 
 	public String getPhoto() {
 		return photo;
