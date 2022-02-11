@@ -2,6 +2,7 @@ package com.sec.model.comunication;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,6 +13,7 @@ import javax.validation.constraints.NotBlank;
 
 import com.sec.model.users.User;
 
+@Entity
 public class Message {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +25,7 @@ public class Message {
 	@NotBlank
     private Date dateheur;
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-	@JoinColumn(name = "id", nullable = false)
+	@JoinColumn(name = "userid", nullable = false)
 	private User user ;
 	public Message() {
 		super();
