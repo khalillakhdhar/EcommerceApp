@@ -3,13 +3,25 @@ package com.sec.model.comunication;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Message {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	@JoinColumn(name = "id", nullable = false)
+	@OnDelete(action = OnDeleteAction.CASCADE)
+	@JsonProperty("id")
     private Long id; 
 	
 	@Column(nullable = false)
