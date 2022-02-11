@@ -13,6 +13,7 @@ Optional<User> findByTelephone(String telephone);
 Optional<User> findByAge(String age);
 Optional<User> findByNom(String nom);
 Optional<User> findByPrenom(String prenom);
+
 Optional<User> findByEmail(String email);
 Optional<User> findByEmailAndPassword(String email,String password);
 }
