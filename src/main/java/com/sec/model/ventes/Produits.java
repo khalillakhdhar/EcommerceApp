@@ -33,6 +33,79 @@ public class Produits {
 	@Column(nullable = false)
 	private String categorie ;
 	
+	public Produits() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Produits(int id, Categorie cat, String photo, String description, String categorie, double prix,
+			long idCommande) {
+		super();
+		this.id = id;
+		this.cat = cat;
+		this.photo = photo;
+		this.description = description;
+		this.categorie = categorie;
+		this.prix = prix;
+		this.idCommande = idCommande;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Categorie getCat() {
+		return cat;
+	}
+
+	public void setCat(Categorie cat) {
+		this.cat = cat;
+	}
+
+	public String getPhoto() {
+		return photo;
+	}
+
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getCategorie() {
+		return categorie;
+	}
+
+	public void setCategorie(String categorie) {
+		this.categorie = categorie;
+	}
+
+	public double getPrix() {
+		return prix;
+	}
+
+	public void setPrix(double prix) {
+		this.prix = prix;
+	}
+
+	public long getIdCommande() {
+		return idCommande;
+	}
+
+	public void setIdCommande(long idCommande) {
+		this.idCommande = idCommande;
+	}
+
 	@Column(nullable = false)
 	private double prix;
 	
