@@ -23,7 +23,7 @@ public class Message {
 	@NotBlank
     private Date dateheur;
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-	@JoinColumn(name = "titre", nullable = false)
+	@JoinColumn(name = "id", nullable = false)
 	private User user ;
 	public Message() {
 		super();
