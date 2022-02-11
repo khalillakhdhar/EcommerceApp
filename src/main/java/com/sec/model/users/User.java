@@ -1,43 +1,38 @@
 package com.sec.model.users;
 
-import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 
+@Entity
 public class User {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; 
-	@Column(nullable = false)
+	@NotBlank
      private String nom;
-	@Column(nullable = false)
+	@NotBlank
     private String prenom;
 
-	@Column(nullable = false)
+	@NotBlank
     @Email
     private String email;
-	@Column(nullable = false)
+	@NotBlank
     private String password;
-	@Column(nullable = false)
+	@NotBlank
     private String age;
+	@NotBlank
+    private String adresse;
+	@NotBlank
+    private String telephone;
+	@NotBlank
+	private Grade grade;
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
-	}
-	public User(Long id, String nom, String prenom, @Email String email, String password, String age, String adresse,
-			String telephone, Grade grade) {
-		super();
-		this.id = id;
-		this.nom = nom;
-		this.prenom = prenom;
-		this.email = email;
-		this.password = password;
-		this.age = age;
-		this.adresse = adresse;
-		this.telephone = telephone;
-		this.grade = grade;
 	}
 	public Long getId() {
 		return id;
@@ -93,10 +88,10 @@ public class User {
 	public void setGrade(Grade grade) {
 		this.grade = grade;
 	}
-	@Column(nullable = false)
-    private String adresse;
-	@Column(nullable = false)
-    private String telephone;
-	@Column(nullable = false)
-	private Grade grade;
+    
+
+    
+
+	
+
 }
