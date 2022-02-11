@@ -2,6 +2,7 @@ package com.sec.model.comunication;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,6 +13,7 @@ import javax.validation.constraints.NotBlank;
 
 import com.sec.model.users.User;
 
+@Entity
 public class Message {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,8 +25,11 @@ public class Message {
 	@NotBlank
     private Date dateheur;
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-	@JoinColumn(name = "id", nullable = false)
-	private User user ;
+	@JoinColumn(name = "idemmetteur", nullable = false)
+	private User emetteur ;
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	@JoinColumn(name = "idrecepteur", nullable = false)
+	private User recepteur ;
 	public Message() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -53,12 +58,19 @@ public class Message {
 	public void setDateheur(Date dateheur) {
 		this.dateheur = dateheur;
 	}
-	public User getUser() {
-		return user;
+	public User getEmetteur() {
+		return emetteur;
 	}
-	public void setUser(User user) {
-		this.user = user;
+	public void setEmetteur(User emetteur) {
+		this.emetteur = emetteur;
 	}
+	public User getRecepteur() {
+		return recepteur;
+	}
+	public void setRecepteur(User recepteur) {
+		this.recepteur = recepteur;
+	}
+	
 	
 	
 

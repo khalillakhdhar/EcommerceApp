@@ -1,6 +1,7 @@
 package com.sec.model.ventes;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,18 +14,16 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
+@Entity
 public class Produits {
+
 	
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id ;
 	
-	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-	@JoinColumn(name = "titre", nullable = false)
-	@OnDelete(action = OnDeleteAction.CASCADE)
-	@JsonProperty("titre")
-	private Categorie cat;
+	
+	private String cat;
 	
 	@NotBlank
 	private String photo ;
@@ -53,11 +52,13 @@ public class Produits {
 		this.id = id;
 	}
 
-	public Categorie getCat() {
+
+
+	public String getCat() {
 		return cat;
 	}
 
-	public void setCat(Categorie cat) {
+	public void setCat(String cat) {
 		this.cat = cat;
 	}
 
@@ -101,6 +102,8 @@ public class Produits {
 		this.idCommande = idCommande;
 	}
 	
+	
+
 	
 
 }
