@@ -1,13 +1,13 @@
 package com.sec.globale;
 
 public class TestGlobale {
-	public boolean champValidation(String ch) { 
-	
-	if(ch.isEmpty())
-		return true;
-	else 
-		return false;
+public boolean verifStringNonNull(String ch)
+{
+return !ch.isEmpty();	
+
 }
-	
-	
+public boolean detectlength(int longueur,String ch)
+{
+return ch.length()>longueur;	
+}
 }
