@@ -7,7 +7,7 @@ public class TaxeTestImplement implements TaxeTestInterface {
 	@Override
 	public boolean validationTaxe(double taxes) {
 		// TODO Auto-generated method stub
-		return taxes>1;
+		return taxes>0;
 	}
 
 }

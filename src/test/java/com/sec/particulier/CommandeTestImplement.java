@@ -10,7 +10,7 @@ public class CommandeTestImplement implements CommandeTestInterface {
 	@Override
 	public boolean validationProduits(List<Produits> produits) {
 		// TODO Auto-generated method stub
-		return ! produits.isEmpty();
+		return !produits.isEmpty();
 	}
 
 }
