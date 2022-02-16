@@ -6,25 +6,33 @@ public class UserTestImplement implements UserTestInterface {
 
 	@Override
 	public boolean mailValidation(String email) {
-		// TODO Auto-generated method stub
+		
 		return false;
 	}
 
 	@Override
 	public boolean passValidation(String password) {
-		// TODO Auto-generated method stub
-		return false;
+		String ch;
+		if(password.length()>8) && (charactar.isDigit(ch))
+			return true;
+		else
+			return false;
+		
 	}
 
 	@Override
 	public boolean telValidation(String telephone) {
-		// TODO Auto-generated method stub
-		return false;
+		if (telephone.length()>8)
+		   return true;
+		else 
+			return false;
 	}
 
 	@Override
 	public boolean ageValidation(int age) {
-		// TODO Auto-generated method stub
+		if (age >=18)
+		return true;	
+		else	
 		return false;
 	}
 
