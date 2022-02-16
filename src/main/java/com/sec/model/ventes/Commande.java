@@ -1,7 +1,9 @@
-package com.sec.model.ventes;
+ package com.sec.model.ventes;
 
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -18,8 +20,8 @@ public class Commande {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 
 	private long id;
-	
-	private Produits[] produits;
+	@ElementCollection
+	private List<Produits> produits;
 	
 	@OneToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "userid", nullable = false)
@@ -35,13 +37,9 @@ public class Commande {
 
 	
 
-	public Produits[] getProduits() {
-		return produits;
-	}
+	
 
-	public void setProduits(Produits[] produits) {
-		this.produits = produits;
-	}
+	
 
 	public User getUser() {
 		return user;
@@ -49,6 +47,14 @@ public class Commande {
 
 	public void setUser(User user) {
 		this.user = user;
+	}
+
+	public List<Produits> getProduits() {
+		return produits;
+	}
+
+	public void setProduits(List<Produits> produits) {
+		this.produits = produits;
 	} 
 	
 	
