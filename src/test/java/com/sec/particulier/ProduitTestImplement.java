@@ -15,13 +15,13 @@ public class ProduitTestImplement implements ProduitTestInterface {
 	@Override
 	public boolean validationPrix(float prix) {
 		// TODO Auto-generated method stub
-		return prix>0.0;
+		return prix>0;
 	}
 
 	@Override
 	public boolean validationStock(int stock) {
 		// TODO Auto-generated method stub
-		return stock >0;
+		return stock>0;
 	}
 
 }
