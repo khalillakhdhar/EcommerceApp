@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.sec.model.users.User;
 import com.sec.repositories.user.UserSearchRepository;
 
+
 @Service
 public class UserSearchImplement implements UserSearchInterface {
 @Autowired
