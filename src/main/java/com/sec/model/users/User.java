@@ -31,8 +31,7 @@ public class User {
 	@NotBlank
     private String telephone;
 	
-	@Enumerated(EnumType.STRING)
-	private Grade grade;
+	private String grade;
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -85,12 +84,13 @@ public class User {
 	public void setTelephone(String telephone) {
 		this.telephone = telephone;
 	}
-	public Grade getGrade() {
+	public String getGrade() {
 		return grade;
 	}
-	public void setGrade(Grade grade) {
+	public void setGrade(String grade) {
 		this.grade = grade;
 	}
+	
     
 
     

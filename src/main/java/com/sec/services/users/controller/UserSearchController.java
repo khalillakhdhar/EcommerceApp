@@ -12,7 +12,7 @@ import com.sec.model.users.User;
 import com.sec.services.users.UserSearchImplement;
 
 @RestController
-@RequestMapping("user/search")
+@RequestMapping("user/")
 public class UserSearchController {
 @Autowired
 UserSearchImplement userSearchImplement;
