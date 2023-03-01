@@ -13,6 +13,7 @@ public class EcommerceAppApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EcommerceAppApplication.class, args);
 	}
+	@SuppressWarnings("deprecation")
 	@Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurerAdapter() {
